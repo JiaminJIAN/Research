@@ -1,1 +1,1 @@
-# stochastic-control-problem
+# Stochastic control problem
