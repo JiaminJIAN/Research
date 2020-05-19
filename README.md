@@ -1,1 +1,6 @@
-# Stochastic control problem
+# Research
+
+## Platoon control
+
+
+## Stochastic control exercises
