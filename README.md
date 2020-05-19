@@ -7,4 +7,4 @@
 
 ## (2) Stochastic control exercises
 
-- [Exercise1](https://github.com/JiaminJIAN/Research/blob/master/Exercises/SC_Exercise%201.pdf)
+- [Exercise 1](https://github.com/JiaminJIAN/Research/blob/master/Exercises/SC_Exercise%201.pdf)
