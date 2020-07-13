@@ -139,7 +139,7 @@ Consider a $(N+1)$-player game, for player $i = 0, 1, \dots, N$, the state is
 \begin{equation} \label{state of N+1 player game}
     d X_{i}(t) = b(X_{i}(t), u_{i}(t)) \, d t + \sigma \, d W(t),
 \end{equation}
-where $u_{i} (t)$ is the control of player $i$ and $W(t)$ is a standard Brownian motion. Denote $X_{t} = (X_{0}(t), X_{1}(t), \dots, X_{N}(t))$,  $u(t) = (u_{0}(t), u_{1}(t), \dots, u_{N}(t))$, and for each player $i = 0, 1, \dots, N$, we set the cost function as following:
+where $u_{i} (t)$ is the control of player $i$ and $W(t)$ is a standard Brownian motion. Denote $X(t) = (X_{0}(t), X_{1}(t), \dots, X_{N}(t))$,  $u(t) = (u_{0}(t), u_{1}(t), \dots, u_{N}(t))$, and for each player $i = 0, 1, \dots, N$, we set the cost function as following:
 \begin{equation} \label{cost function of of N+1 player game}
     J_{i}(u) = \mathbb{E} \Big{[} \int_{0}^{T} l_{i}(X(t), u(t)) \, d t + g_{i}(X(T)) \Big{]}.
 \end{equation}
@@ -175,8 +175,8 @@ where $p_{i}(t)$ and $v_{i}(t)$ denote the position and velocity of vehicle $i$,
 \begin{array}{cccc}
 X_{i}(t) =
   \left(   \begin{array}{c}
-    P_{i}(t) \\
-    V_{i}(t)
+    p_{i}(t) \\
+    v_{i}(t)
   \end{array}   \right),
 &
 b(X_{i}(t), u_{i}(t)) =
@@ -226,8 +226,8 @@ First we consider the case when there is only one vehicle in the platoon system.
 \begin{array}{c}
 d  X_{0}(t) =
   \left(   \begin{array}{c}
-    d  P_{0}(t) \\
-    d  V_{0}(t)
+    d  p_{0}(t) \\
+    d  v_{0}(t)
   \end{array}   \right)  = 
 \left(    \begin{array}{c}
     v_{0}(t) \\
