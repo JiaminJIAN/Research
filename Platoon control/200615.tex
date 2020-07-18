@@ -200,7 +200,7 @@ b(X_{i}(t), u_{i}(t)) =
 \end{equation*}
 then the formula (\ref{eq:node dynamic}) can be transformed as
 \begin{equation*}
-    d X_{i}(t) = b(x_{i}(t), u_{i}(t)) \, d t + \sigma \, d W(t),
+    d X_{i}(t) = b(x_{i}(t), u_{i}(t)) \, d t + \sigma \, d \widetilde{W}_{i}(t),
 \end{equation*}
 which is consistent with the dynamic system (\ref{state of N+1 player game}) of general $(N+1)$-player game.
 
@@ -243,7 +243,7 @@ d  X_{0}(t) =
    d B_{0}(t)
   \end{array}   \right),
 \end{equation}
-where $u_{0}(t)$ is a progressively measurable process valued in $\Pi$, which is a subset of $\mathbb{R}$. The cost function is
+where $u_{0}(t)$ is a progressively measurable process valued in $\Pi$, which is the admissible control set. The cost function is
 \begin{equation}
     J_{0} (u_{0}) = \mathbb{E} \Big{[} \int_{0}^{T} u_{0}^{2}(t) \, d t - p_{0}^{2}(T) \Big{]},
 \end{equation}
@@ -289,12 +289,12 @@ we have
 Plugging it back to the PDE, we can get the Ricatti system of ODEs as follows
 \begin{equation*}
     \begin{cases}
-   \frac{\phi_{1}(\tau)}{\partial \tau} + \frac{1}{4} \phi_{3}^{2}(\tau) = 0 \\
-   \frac{\phi_{2}(\tau)}{\partial \tau} + \phi_{2}^{2}(\tau) - \phi_{3}(\tau) = 0 \\
-   \frac{\phi_{3}(\tau)}{\partial \tau} + \phi_{2}(\tau)\phi_{3}(\tau) - 2 \phi_{1}(\tau) = 0 \\
-   \frac{\phi_{4}(\tau)}{\partial \tau} + \frac{1}{2} \phi_{3} (\tau) \phi_{5}(\tau) = 0 \\
-   \frac{\phi_{5}(\tau)}{\partial \tau} + \phi_{2} (\tau) \phi_{5}(\tau) - \phi_{4}(\tau) = 0 \\
-   \frac{\phi_{6}(\tau)}{\partial \tau} + \frac{1}{4} \phi_{5}^{2} (\tau) - \sigma_{1}^{2} \phi_{1}(\tau) - \sigma_{2}^{2} \phi_{2}(\tau) = 0
+   \phi_{1}^{'} (\tau) + \frac{1}{4} \phi_{3}^{2}(\tau) = 0 \\
+   \phi_{2}^{'} (\tau) + \phi_{2}^{2}(\tau) - \phi_{3}(\tau) = 0 \\
+   \phi_{3}^{'} (\tau) + \phi_{2}(\tau)\phi_{3}(\tau) - 2 \phi_{1}(\tau) = 0 \\
+   \phi_{4}^{'} (\tau) + \frac{1}{2} \phi_{3} (\tau) \phi_{5}(\tau) = 0 \\
+   \phi_{5}^{'} (\tau) + \phi_{2} (\tau) \phi_{5}(\tau) - \phi_{4}(\tau) = 0 \\
+   \phi_{6}^{'} (\tau) + \frac{1}{4} \phi_{5}^{2} (\tau) - \sigma_{1}^{2} \phi_{1}(\tau) - \sigma_{2}^{2} \phi_{2}(\tau) = 0
    \end{cases}
 \end{equation*}
 with the initial condition
