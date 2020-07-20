@@ -99,7 +99,6 @@
 
 \maketitle
 
-
 \begin{abstract}
 
 
@@ -133,9 +132,9 @@ In this paper, we utilize the above framework and modify the models in [1]. As t
  
 \section{Problem Setup}
 
-\subsection{General $(N+1)$-player game}
+\subsection{General $(N+1)$-players game}
 
-Consider a $(N+1)$-player game, for player $i = 0, 1, \dots, N$, the state is
+Consider a $(N+1)$-players game, for player $i = 0, 1, \dots, N$, the state is governed by a SDE
 \begin{equation} \label{state of N+1 player game}
     d X_{i}(t) = b(X_{i}(t), u_{i}(t)) \, d t + \sigma \, d W(t),
 \end{equation}
@@ -145,8 +144,9 @@ where $u_{i} (t)$ is the control of player $i$ and $W(t)$ is a standard Brownian
 \end{equation}
 The value function of each player $i = 0, 1, \dots, N$ is
 \begin{equation*} \label{value function of N+1 player game}
-    v_{i} (t,x) = \inf_{u_{i} \in \Pi} \mathbb{E} \Big{[} \int_{t}^{T} l_{i}(X(s), u(s)) \, d s + g_{i}(X(T)) \Big{]}.
+    v_{i} (t,x) = \inf_{u_{i} \in \Pi} \mathbb{E} \Big{[} \int_{t}^{T} l_{i}(X(s), u(s)) \, d s + g_{i}(X(T)) \Big{]},
 \end{equation*}
+where $\Pi$ is the admissible control set.
 
 Our goal is to minimize these cost functions and obtain the Nash equilibrium $(u_{0}^{*}, u_{1}^{*}, \dots, u_{N}^{*})$, which can be achieved when 
 \begin{equation} \label{eq: Nash equilibrium of N+1 player game}
@@ -157,13 +157,13 @@ holds for all $i = 0, 1, \dots, N$. The corresponding Hamilton–Jacobi–Bellma
     \begin{cases}
     \partial_{t} v_{i} + \sum_{j = 0}^{N} b(x_{j}, u_{j}^{*}) \nabla_{j} v_{i} + \frac{1}{2} (\sigma \sigma^\mathsf{T} D^{2} v_{i}) + l_{i}(x, u_{i}^{*}) = 0 \\
     u_{i}^{*} = \underset{u \in \Pi}{\arg\min} \{b(x_{i}, u) \nabla_{i} v_{i} + l_{i}(x, a) \} \\
-    v_{i} (x, T) = g_{i} (x)
+    v_{i} (x, T) = g_{i} (x).
     \end{cases}
 \end{equation}
 
 \subsection{Platoon control}
 
-We consider a platoon running on a flat road with $N + 1$ vehicles, including a leading vehicle (LV, indexed by 0) and N following vehicles (FVs, indexed from 1 to $N$). Motivated by the Node dynamic model in [1], we neglects the inertial delay in powertrain dynamics and assume that the vehicle dynamics is ideal double integrators. But considering the uncertainties in the driving process and signal delay, we add the randomness to the Node dynamic model, for $i = 0, 1, \dots, N$,
+We consider a platoon running on a flat road with $N + 1$ vehicles, including a leading vehicle (LV, indexed by 0) and N following vehicles (FVs, indexed from 1 to $N$). Motivated by the node dynamic model in [1], we neglects the inertial delay in powertrain dynamics and assume that the vehicle dynamics is ideal double integrators. But considering the uncertainties in the driving process and signal delay, we add the random term to the node dynamic model, for $i = 0, 1, \dots, N$,
 \begin{equation} \label{eq:node dynamic}
    \begin{cases}
    d p_{i}(t) = v_{i}(t) \, d t + \sigma_{1} \, d W_{i}(t)  \\
@@ -198,13 +198,13 @@ b(X_{i}(t), u_{i}(t)) =
     B_{i}(t)
   \end{array}   \right),
 \end{equation*}
-then the formula (\ref{eq:node dynamic}) can be transformed as
+then the formula (\ref{eq:node dynamic}) is equivalent to
 \begin{equation*}
     d X_{i}(t) = b(x_{i}(t), u_{i}(t)) \, d t + \sigma \, d \widetilde{W}_{i}(t),
 \end{equation*}
-which is consistent with the dynamic system (\ref{state of N+1 player game}) of general $(N+1)$-player game.
+which is consistent with the dynamic system (\ref{state of N+1 player game}) of general $(N+1)$-players game.
 
-The goal of the platoon control is to maintain the best distance between adjacent vehicles, keep the speed of each following vehicle consistent with that of the leader vehicle, and make the traffic efficiency as high as possible, so for the vehicle $i = 1, 2, \dots, N$ in the platoon we can set the cost function as follows:
+The goal of the platoon control is to maintain the best distance between adjacent vehicles, keep the same speed of each following vehicle consistent with that of the forward vehicle, and make the traffic efficiency as high as possible, so for the vehicle $i = 1, 2, \dots, N$ in the platoon we can set the cost function as follows:
 \begin{equation} \label{eq: cost function2}
     J_{i} (u_{i}) = \mathbb{E} \Big{[} \int_{0}^{T} \Big{(} u_{i}^{2}(t) + |p_{i}(t) - p_{i-1}(t) - d|^{2} + |v_{i}(t) - v_{i - 1}(t)|^{2} \Big{)} \, d t - p_{i}^{2}(T) \Big{]},
 \end{equation}
@@ -272,18 +272,18 @@ Denote $\tau = T-t$ and $w(t, x) = \widetilde{w}(\tau, x)$, then the following P
    \widetilde{w}(0, x) = - x_{0, 1}^{2}.
    \end{cases}
 \end{equation*}
-Suppose 
+Suppose the solution of the above PDE is
 \begin{equation}
     \widetilde{w}(\tau, x) = \phi_{1}(\tau) x_{0, 1}^{2} + \phi_{2}(\tau) x_{0, 2}^{2} + \phi_{3}(\tau) x_{0, 1} x_{0, 2} + \phi_{4}(\tau) x_{0, 1} + \phi_{5}(\tau) x_{0, 2} + \phi_{6} (\tau),
 \end{equation}
-we have
+then we have
 \begin{equation*}
     \begin{cases}
    \frac{\partial \widetilde{w}}{\partial \tau} = x_{0, 1}^{2} \phi_{1}^{'} (\tau) + x_{0, 2}^{2} \phi_{2}^{'} (\tau) + x_{0, 1} x_{0, 2} \phi_{3}^{'} (\tau) + x_{0, 1} \phi_{4}^{'} (\tau) + x_{0, 2} \phi_{5}^{'} (\tau) + \phi_{6}^{'} (\tau) \\
    \frac{\partial \widetilde{w}}{\partial x_{0, 1}} = 2 x_{0, 1} \phi_{1} (\tau) + x_{0, 2} \phi_{3}(\tau) + \phi_{4}(\tau) \\
    \frac{\partial^{2} \widetilde{w}}{\partial x_{0, 1}^{2}} = 2 \phi_{1}(\tau) \\
    \frac{\partial \widetilde{w}}{\partial x_{0, 2}} = 2 x_{0, 2} \phi_{2} (\tau) + x_{0, 1} \phi_{3}(\tau) + \phi_{5}(\tau) \\
-   \frac{\partial^{2} \widetilde{w}}{\partial x_{0, 2}^{2}} = 2 \phi_{2}(\tau)
+   \frac{\partial^{2} \widetilde{w}}{\partial x_{0, 2}^{2}} = 2 \phi_{2}(\tau).
    \end{cases}
 \end{equation*}
 Plugging it back to the PDE, we can get the Ricatti system of ODEs as follows
@@ -294,7 +294,7 @@ Plugging it back to the PDE, we can get the Ricatti system of ODEs as follows
    \phi_{3}^{'} (\tau) + \phi_{2}(\tau)\phi_{3}(\tau) - 2 \phi_{1}(\tau) = 0 \\
    \phi_{4}^{'} (\tau) + \frac{1}{2} \phi_{3} (\tau) \phi_{5}(\tau) = 0 \\
    \phi_{5}^{'} (\tau) + \phi_{2} (\tau) \phi_{5}(\tau) - \phi_{4}(\tau) = 0 \\
-   \phi_{6}^{'} (\tau) + \frac{1}{4} \phi_{5}^{2} (\tau) - \sigma_{1}^{2} \phi_{1}(\tau) - \sigma_{2}^{2} \phi_{2}(\tau) = 0
+   \phi_{6}^{'} (\tau) + \frac{1}{4} \phi_{5}^{2} (\tau) - \sigma_{1}^{2} \phi_{1}(\tau) - \sigma_{2}^{2} \phi_{2}(\tau) = 0,
    \end{cases}
 \end{equation*}
 with the initial condition
@@ -308,7 +308,7 @@ In this section we consider the case when $N = 1$. There are two vehicles in the
 \begin{equation}
     \begin{cases}
    d X_{0}^{*}(t) = b(X_{0}^{*}(t), u_{0}^{*}(t)) \, d t + \sigma \, d \widetilde{W}_{0}(t)  \\
-   d X_{1}(t) = b(X_{1} (t), u_{1} (t)) \, d t + \sigma \, d \widetilde{W}_{1}(t)
+   d X_{1}(t) = b(X_{1} (t), u_{1} (t)) \, d t + \sigma \, d \widetilde{W}_{1}(t).
    \end{cases}
 \end{equation}
 We want to minimize the cost function
@@ -324,7 +324,7 @@ The corresponding HJB equation is as following
     \begin{cases}
    - \frac{\partial w}{\partial t} - \inf_{u_{1} \in \Pi} \Big{[} x_{0,2}^{*} \frac{\partial w}{\partial x_{0, 1}^{*}} + u_{0}^{*} \frac{\partial w}{\partial x_{0, 2}^{*}} + x_{1,2} \frac{\partial w}{\partial x_{1, 1}} + u_{1} \frac{\partial w}{\partial x_{1, 2}} + \frac{1}{2} \sigma_{1}^{2} \frac{\partial^{2} w}{\partial x_{0, 1}^{* 2}} + \frac{1}{2} \sigma_{2}^{2} \frac{\partial^{2} w}{\partial x_{0, 2}^{* 2}}  \\
    \qquad + \frac{1}{2} \sigma_{1}^{2} \frac{\partial^{2} w}{\partial x_{1, 1}^{2}} + \frac{1}{2} \sigma_{2}^{2} \frac{\partial^{2} w}{\partial x_{1, 2}^{2}} + u_{1}^{2} + (x_{1, 2} - x_{0, 2}^{*})^{2} + (x_{1, 1} - x_{0, 1}^{*} - d)^{2} \Big{]}   = 0  \\
-   w(T, x) = - x_{1, 1}^{2}
+   w(T, x) = - x_{1, 1}^{2},
    \end{cases}
 \end{equation}
 where $w(t, x) = w(t, x_{0, 1}^{*}, x_{0, 2}^{*}, x_{1, 1}, x_{1, 2})$. Suppose the equation (\ref{HJB, N=1}) has the unique solution $w(t,x) \in C^{1,2}([0, \infty), \mathbb{R}^{4})$. Under this assumption, we have $u_{1}^{*}(t, x) = - \frac{1}{2} \frac{\partial w}{\partial x_{1, 2}}$, and then the HJB equation (\ref{HJB, N=1}) can be simplified as
@@ -332,7 +332,7 @@ where $w(t, x) = w(t, x_{0, 1}^{*}, x_{0, 2}^{*}, x_{1, 1}, x_{1, 2})$. Suppose 
     \begin{cases}
     \frac{\partial w}{\partial t} + x_{0,2}^{*} \frac{\partial w}{\partial x_{0, 1}^{*}} + u_{0}^{*} \frac{\partial w}{\partial x_{0, 2}^{*}} + x_{1,2} \frac{\partial w}{\partial x_{1, 1}} - \frac{1}{4} \Big{(}\frac{\partial w}{\partial x_{1, 2}} \Big{)}^{2} + \frac{1}{2} \sigma_{1}^{2} \frac{\partial^{2} w}{\partial x_{0, 1}^{* 2}} + \frac{1}{2} \sigma_{2}^{2} \frac{\partial^{2} w}{\partial x_{0, 2}^{* 2}}  \\
    \qquad + \frac{1}{2} \sigma_{1}^{2} \frac{\partial^{2} w}{\partial x_{1, 1}^{2}} + \frac{1}{2} \sigma_{2}^{2} \frac{\partial^{2} w}{\partial x_{1, 2}^{2}} + (x_{1, 2} - x_{0, 2}^{*})^{2} + (x_{1, 1} - x_{0, 1}^{*} - d)^{2}   = 0  \\
-   w(T, x) = - x_{1, 1}^{2}
+   w(T, x) = - x_{1, 1}^{2}.
    \end{cases}
 \end{equation*}
 
