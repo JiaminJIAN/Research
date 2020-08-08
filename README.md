@@ -15,3 +15,4 @@
 
 - [Continuous mapping of two Banach spaces](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Exercise_Banach%20spaces%201.pdf)
 - [Continuous mapping of two Polish spaces](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Exercise_Polish%20spaces%201.pdf)
+- [A Question about the parabolic PDE](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Question%20about%20the%20parabolic%20PDE.pdf)
