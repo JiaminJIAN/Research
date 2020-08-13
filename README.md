@@ -21,3 +21,4 @@
 
 - [Exercise: viscosity solution and comparison principle](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Exercise_viscosity%20solution%20and%20comparison%20principle.pdf)
 - [A Question about the parabolic PDE](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Question%20about%20the%20parabolic%20PDE.pdf)
+- [Uniformly elliptic PDEs](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Uniformly%20elliptic%20PDEs.pdf)
