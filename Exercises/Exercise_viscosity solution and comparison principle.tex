@@ -1,0 +1,87 @@
+%GCE of WPI
+%by Jiamin JIAN
+
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage{CJK}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{amstext}
+\usepackage{blkarray}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{listings}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+\begin{document}
+
+
+\begin{center}
+\textbf{Viscosity solution and comparison principle}
+\end{center}
+
+\vspace{12pt}
+
+$\textbf{Exercise 1:}$
+
+Consider the ODE
+\begin{equation} \label{ODE}
+    \begin{cases}
+   |u'(x)| -1 = 0, \hbox{ on } x \in (-1, 1) \\
+   u(\pm 1) = 0
+   \end{cases}
+\end{equation}
+
+
+(1) Prove that $u(x) = |x|-1$ is a viscosity solution.
+
+(2) Can you prove comparison principle?
+
+\vspace{8pt}
+
+$\textbf{Solution:}$
+
+(1) For $|u'(x)| - 1 = 0$, we denote 
+\begin{equation} 
+    F(x, u, p, X) = |p| - 1.
+\end{equation}
+By the definition of semi-jets, for $u(x) = |x| - 1$, when $x \in (0,1)$, we have
+\begin{equation*}
+    J^{2,+} u(x) = \{1\} \times [0, + \infty), \quad J^{2, -} u(x) = \{1 \} \times (- \infty, 0].
+\end{equation*}
+And when $x \in (-1, 0)$, 
+\begin{equation*}
+    J^{2,+} u(x) = \{-1\} \times [0, + \infty), \quad J^{2, -} u(x) = \{-1 \} \times (- \infty, 0].
+\end{equation*}
+Thus for any $x \in (-1, 1) \setminus \{0\}$, for any $(p, X) \in J^{2,+} u(x)$, we have
+\begin{equation*}
+    F(x, u, p, X) = |p| - 1 = 1 - 1 = 0,
+\end{equation*}
+and for any $(p, X) \in J^{2,-} u(x)$, we also can get
+\begin{equation*}
+    F(x, u, p, X) = |p| - 1 = 1 - 1 = 0.
+\end{equation*}
+For $x = 0$, by the definition of the closure of semi-jets, for any $(p, X) \in \bar{J}^{2,+} u(0)$, we have $p = 1$ or $p = -1$, then $F(x, u, p, X) = |p| - 1 = 0$. Similarly, for any $(p, X) \in \bar{J}^{2,-} u(0)$, $F(x, u, p, X) = |p| - 1 = 0$. Hence we can conclude that for any $x \in (-1, 1)$ and $(p, X) \in \bar{J}^{2,+} u(x)$,
+\begin{equation*}
+    F(x, u, p, X) = |p| - 1 \leq 0,
+\end{equation*}
+then $u(x) = |x| - 1$ is a viscosity subsolution. And for any $(p, X) \in \bar{J}^{2,-} u(x)$,
+\begin{equation*}
+    F(x, u, p, X) = |p| - 1 \geq 0,
+\end{equation*}
+then $u(x) = |x| - 1$ is a viscosity supersolution. For $x = 1$ or $x = -1$, $u(x) = |x| - 1 = 0$, so we know that $u(x) = |x| - 1$ is a viscosity solution of the ODE (\ref{ODE}).
+
+\vspace{4pt}
+
+(2) No, we can not get the comparison principle for the ODE (\ref{ODE}). For $v(x) = 1 - |x|$, by the same method, we can prove that $v(x)$ is also a viscosity solution of (\ref{ODE}). As the comparison principle yields to the uniqueness of the viscosity solution, we can not prove the comparison principle for the ODE (\ref{ODE}).
+
+
+
+\end{document}
