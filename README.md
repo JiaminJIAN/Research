@@ -2,7 +2,7 @@
 
 ## (1) Platoon control
 
-- [Problem setup](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/200615.pdf)
+- [Problem setup](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/200817.pdf)
 
 
 ## (2) Stochastic control exercises
