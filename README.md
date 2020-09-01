@@ -4,6 +4,7 @@
 
 - [Problem setup](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/200817.pdf)
 - [Problem setup: version 2](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/200824.pdf)
+- [Platoon control: version 1](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/platoon_control.ipynb)
 
 
 ## (2) Stochastic control exercises
