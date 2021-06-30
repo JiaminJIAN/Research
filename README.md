@@ -1,7 +1,7 @@
 # Research
 
 ## 1. Notes:
-- [Stochastic process]()
+- [Stochastic process](https://github.com/JiaminJIAN/Research/blob/master/Notes/Stochastic%20process.pdf)
 
 
 ## 2. Exercises:
