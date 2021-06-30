@@ -1,6 +1,7 @@
 # Research
 
 ## 1. Notes:
+- [Stochastic process]()
 
 
 ## 2. Exercises:
