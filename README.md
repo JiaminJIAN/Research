@@ -1,9 +1,9 @@
 # Research
 
-## (1) Notes:
+## 1. Notes:
 
 
-## (2) Exercises:
+## 2. Exercises:
 
 ### 2.1 Stochastic control
 
@@ -23,7 +23,7 @@
 - [A Question about the parabolic PDE](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Question%20about%20the%20parabolic%20PDE.pdf)
 - [Uniformly elliptic PDEs](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Uniformly%20elliptic%20PDEs.pdf)
 
-## (3) Project:
+## 3. Project:
 
 ### 3.1 Platoon control
 
