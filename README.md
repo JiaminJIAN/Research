@@ -6,7 +6,7 @@
 
 ## 2. Exercises:
 ### 2.1 Mean field game
-- [An example of LQ MFG]()
+- [An example of LQ MFG](https://github.com/JiaminJIAN/Research/blob/master/Exercises/An%20example%20of%20LQ%20MFG.pdf)
 
 ### 2.2 Stochastic control
 - [LQG problem](https://github.com/JiaminJIAN/Research/blob/master/Exercises/SC_Exercise%201.pdf)
