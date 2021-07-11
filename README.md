@@ -9,7 +9,7 @@
 - [An example of LQ MFG](https://github.com/JiaminJIAN/Research/blob/master/Exercises/An%20example%20of%20LQ%20MFG2.pdf)
 
 ### 2.2 Stochastic control
-- [LQG problem](https://github.com/JiaminJIAN/Research/blob/master/Exercises/SC_Exercise%201.pdf)
+- [LQ contorl problem](https://github.com/JiaminJIAN/Research/blob/master/Exercises/SC_Exercise%201.pdf)
 - [Viscosity solution of parabolic equation](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Exercise_Viscosity%20solution%20of%20parabolic%20equation.pdf)
 - [Comparison principle](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Comparison%20principle.pdf)
 - [Semi-jets](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Semi-jets.pdf)
