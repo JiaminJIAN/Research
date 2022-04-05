@@ -29,6 +29,8 @@
 - [Uniformly elliptic PDEs](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Uniformly%20elliptic%20PDEs.pdf)
 
 ## 3. Project:
-### 3.1 Platoon control
-- [Problem setup](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/200824.pdf)
-- [Code](https://github.com/JiaminJIAN/Research/blob/master/Platoon%20control/platoon_control.ipynb)
+### 3.1 Graphon mean field game
+- [Paper](https://arxiv.org/pdf/2009.12144.pdf)
+
+### 3.2 LQG Mean Field Games with a Markov Chain as its common noise
+- [Paper](https://arxiv.org/pdf/2106.04762.pdf)
