@@ -32,5 +32,5 @@
 ### 3.1 On the graphon mean field game equations: individual agent affine dynamics and mean field dependent performance functions
 - [Paper](https://www.esaim-cocv.org/articles/cocv/abs/2022/01/cocv210017/cocv210017.html)
 
-### 3.2 LQG Mean Field Games with a Markov Chain as its common noise
+### 3.2 The convergence rate of the equilibrium measure for the LQG Mean Field Game with a Common Noise
 - [Paper](https://arxiv.org/pdf/2106.04762.pdf)
