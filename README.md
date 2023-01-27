@@ -29,8 +29,8 @@
 - [Uniformly elliptic PDEs](https://github.com/JiaminJIAN/Research/blob/master/Exercises/Uniformly%20elliptic%20PDEs.pdf)
 
 ## 3. Project:
-### 3.1 On the Graphon mean field game
-- [Paper](https://arxiv.org/pdf/2009.12144.pdf)
+### 3.1 On the graphon mean field game equations: individual agent affine dynamics and mean field dependent performance functions
+- [Paper](https://www.esaim-cocv.org/articles/cocv/abs/2022/01/cocv210017/cocv210017.html)
 
 ### 3.2 LQG Mean Field Games with a Markov Chain as its common noise
 - [Paper](https://arxiv.org/pdf/2106.04762.pdf)
